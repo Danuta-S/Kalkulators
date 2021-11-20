@@ -24,7 +24,7 @@ namespace Kalkulators
         {
             if (CalculatorDisplay.Text == "0" || enter_value)
             {
-                CalculatorDisplay.Text = "";
+                CalculatorDisplay.Clear();
             }
              
             Button b = (Button)sender;
@@ -129,20 +129,7 @@ namespace Kalkulators
             {
                 CalculatorDisplay.Text += ",";
             }
-            else if (!CalculatorDisplay.Text.Contains(","))
-            {
-                CalculatorDisplay.Text = ",";
-            }
 
-            enter_value = false;
-        }
-
-        private void button15_Click(object sender, EventArgs e)
-        {
-            if (!enter_value && !CalculatorDisplay.Text.Contains(","))
-            {
-                CalculatorDisplay.Text += ",";
-            }
             else if (enter_value)
             {
                 CalculatorDisplay.Text = "0";
@@ -150,7 +137,7 @@ namespace Kalkulators
 
             if (!CalculatorDisplay.Text.Contains(","))
             {
-                CalculatorDisplay.Text += ",";
+                CalculatorDisplay.Text = ",";
             }
 
             enter_value = false;
